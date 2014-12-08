@@ -3,6 +3,7 @@ html{
 	height:100%;
 	margin:0;
 	padding:0;
+	overflow-x:hidden;
 }
 body{margin:0;padding:0;background-color:#2c3e50;background-color:rgba(44, 62, 80, .8)/*background-image:url("resources/pics/bg.png");*/}
 a{text-decoration:none;}
@@ -20,7 +21,6 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	position:fixed;
 	z-index:10;
 	top:0;
-	box-shadow:0px 1px 10px rgba(255, 170, 0, .9);
 }
 .linkbar{
 	float:right;
@@ -48,9 +48,9 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .linkbar li a{
 	color:#cccccc;
 	font-family:'Myriad Pro Regular', Sans-serif;
-	font-size:150%;
+	font-size:18px;
 	padding:10px;
-	padding-top:8px;
+	padding-top:13px;
 	transition: color .4s;
 	display:block;
 }
@@ -127,8 +127,8 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	color:white;
 	font-family:'Lato', Sans-serif;
 }
-.svgw{
-	stroke:#ffffff;
+.svgw:hover{
+	cursor:pointer;
 }
 .footnav{
 	list-style: none;
@@ -188,7 +188,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 }
 .buttonc{
 	margin:0 auto;
-	padding-top:10px;
+	padding:10px 0;
 	width:100px;
 }
 .contactbutton{
@@ -205,6 +205,9 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .contactbutton:active, .contactbutton:focus, .contactbutton:hover{
 	background-color:#ffbb00;
 	outline:none;
+}
+.contactbutton:hover{
+	cursor:pointer;
 }
 #contactpopup{
 	display:none;
@@ -244,6 +247,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .service{
 	background-color:white;
 	height:260px;
+	padding:30px 0;
 }
 .svgicons{
 	height:150px;
@@ -293,7 +297,8 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	margin:0 auto;
 }
 .widcontainer{
-	padding:15px;
+	padding:0 20px;
+	padding-top:50px;
 }
 .widcontainer a{
 	color:white;
@@ -326,7 +331,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	transition:color .4s;
 }
 .rcontent a:hover{
-	color:white;
+	color:#ffaa00;
 }
 .split{
 	width:400px;
@@ -409,10 +414,12 @@ input[type=submit]{
 	display:block;
 	padding:10px;
 	border-bottom: 2px solid #e8930c;
+	margin-top:10px;
 }
 input[type=submit]:hover{
 	background-color:#ffbb00;
 	outline:0;
+	cursor:pointer;
 }
 /*
 			Media Query*/
