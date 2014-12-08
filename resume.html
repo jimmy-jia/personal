@@ -6,13 +6,20 @@
 		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="resources/fonts/style.css" rel='stylesheet' type='text/css'>
 		<link href="stylesheet.css" rel="stylesheet" type="text/css">
 		<link rel="icon" href="favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 		<script>
+			$(document).ready(function() {
+				var content=document.getElementById('content');
+	        	$(content).css("display", "none");
+	    	});
 			function pgload(){
+				var content=document.getElementById('content');
+				$(content).fadeIn(500);
 				var triangle=document.getElementById('fadein');
 				$(fadein).fadeIn(300);
 			}
@@ -23,8 +30,8 @@
 			<div class="top">
 				<div class="nav">
 					<a href="index.html" class="logo">
-						<img src="resources/logohover.png" id="imgsrchover" height="45px" style="margin-top:2px">
-						<img src="resources/logo.png" id="imgsrc" height="45px" style="margin-top:2px"></a>
+						<img src="resources/icon/logohover.png" id="imgsrchover" height="45px" style="margin-top:2px">
+						<img src="resources/icon/logo.png" id="imgsrc" height="45px" style="margin-top:2px"></a>
 					<ul class="linkbar" id="menu">
 						<li><a href="index.html"><span class="linkr"></span>HOME</a></li>
 						<li><a href="design.html"><span class="linkr"></span>DESIGN</a></li>
@@ -32,7 +39,7 @@
 						<li><div class="active" id="fadein"></div><a href="resume.html"><span class="linkr"></span>RESUME</a></li>
 					</ul>
 					<div class="dropdown">
-						<button class="dropbutton" id="dropbutton" onclick="displaynav()"><img src="resources/menu.png" class="svgw" height="40px"></button>
+						<button class="dropbutton" id="dropbutton" onclick="displaynav()"><img src="resources/icon/menu.png" class="svgw" height="40px"></button>
 						<ul class="dropmenu" id="drop-menu">
 							<li><a href="index.html"><span class="linkr"></span>HOME</a></li>
 							<li><a href="design.html"><span class="linkr"></span>DESIGN</a></li>
@@ -42,6 +49,63 @@
 					</div>
 				</div>
 			</div>
+			<div class="rcontent" id="content">
+				<div class="clearheader">
+					<p class="title down">Resume</p>
+					
+				</div>
+				<div class="resume">
+					<div class="resleft">
+						<p class="vlarge">Jimmy Jia</p>
+						<a href="mailto:jimmy.j.jia@gmail.com">jimmy.j.jia@gmail.com</a>
+						<p>Cell: 503-475-9621</p>
+						<a href="http://github.com/jimmy-jia/">My Github</a>
+						<p class="large">Education</p>
+						<p>University of Illinois Urbana Champaign</p>
+						<p>Fall 2013- Spring 2017</p>
+						<p>Electrical Engineering</p>
+						<p>College of Engineering</p>
+
+						<p class="large">Programming</p>
+						<p>HTML, CSS3, C, Python</p>
+						<p>Javascript, C++</p>
+					</div>
+					<div class="resright">
+						<p class="vlarge">Experience</p>
+						<p class="large">TJ Acupuncture</p>
+						<p>Technical Specialist | June 2014 - Now</p>
+						<ul>
+							<li>At TJ Acupuncture, I give support for and manage the technical side of things (the website, computers, files, etc)</li>
+							<li>Created tjacupuncture.com, utilizing HTML/CSS, Javascript/Jquery, and the Google Maps API.</li>
+							<li>Recently added responsive design to accomodate for all screen sizes</li>
+							<li>While at school, I am continuing to give technical support remotely</li>
+						</ul>
+
+						<p class="large">Ace Mentorship</p>
+						<p>Engineering Mentee | Winter 2013 - Spring 2013</p>
+						<ul>
+							<li>Worked with a small team of student peers and a group of professional mentors to design an addition to Washington High School.</li>
+							<li>Together, we created an entire project from the ground up, including Autodesk Revit designs and HVAC, water, environmental impacts and electrical systems</li>
+							<li>At the end of the mentorship, I was selected as one of few students to recieve the 4 year ACE Scholarship for Engineering.</li>
+						</ul>
+
+						<p class="vlarge">Research</p>
+						<p class="large">Pine Mountain Observatory</p>
+						<p>Summer Research | Summer 2012</p><br>
+						<p>Worked with Willamette University professors and graduate students to record photometric data on the contact binary star; VW Cephei. Using the research and data, I wrote my 4000 word International Baccalaurate extended essay, which recieved the highest grade.</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+					<ul class="footnav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="design.html">Design</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="resume.html">Resume</a></li>
+					<div class="legal">
+						<p>Jimmy Jia - 2014</p>
+					</div>
+				</div>
 		</div>
 
 

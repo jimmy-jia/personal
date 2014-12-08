@@ -4,7 +4,7 @@ html{
 	margin:0;
 	padding:0;
 }
-body{margin:0;padding:0;background-color:#2c3e50;background-color:rgba(44, 62, 80, .8)/*background-image:url("resources/bg.png");*/}
+body{margin:0;padding:0;background-color:#2c3e50;background-color:rgba(44, 62, 80, .8)/*background-image:url("resources/pics/bg.png");*/}
 a{text-decoration:none;}
 p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 /*
@@ -18,7 +18,9 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	padding:0;
 	border-bottom:3px solid #ffaa00;
 	position:fixed;
+	z-index:10;
 	top:0;
+	box-shadow:0px 1px 10px rgba(255, 170, 0, .9);
 }
 .linkbar{
 	float:right;
@@ -45,7 +47,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 }
 .linkbar li a{
 	color:#cccccc;
-	font-family:'Lato', Sans-serif;
+	font-family:'Myriad Pro Regular', Sans-serif;
 	font-size:150%;
 	padding:10px;
 	padding-top:8px;
@@ -62,13 +64,11 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .logo img{
 	position:absolute;
 	left:0;
-	-webkit-transition: opacity .4s;
-	-moz-transition: opacity .4s;
-	-o-transition: opacity .4s;
 	transition: opacity .4s;
 }
 #imgsrc:hover{
 	opacity:0;
+	filter:alpha(opacity=0);
 }
 .logo:hover{
 	color:#ffaa00;
@@ -130,6 +130,30 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .svgw{
 	stroke:#ffffff;
 }
+.footnav{
+	list-style: none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	padding-top:40px;
+}
+.footnav li{
+	display:inline-block;
+	padding: 0 10px;
+	border-right:1px solid white;
+	transition:background-color .4s;
+}
+.footnav li:first-child{
+	border-left:1px solid white;
+}
+.footnav li:hover{
+	background-color:#ffaa00;
+	color:black;
+}
+.footnav a{
+	color:white;
+	font-family:'Lato';
+}
 /*
 			Main Page*/
 .title{
@@ -141,20 +165,85 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 }
 .header{
 	padding-bottom:20px;
-	background-image:url('resources/banner.jpg');
+	background-image:url('resources/pics/banner.jpg');
 	background-size:cover;
 	text-shadow:1px 1px #2c3e50;
 }
 .hireme{
 	margin-top:50px;
-	margin-bottom:50px;
+	margin-bottom:20px;
+}
+.meclass{
+	width:600px;
+	margin:0 auto;
+}
+.me{
+	border-bottom-right-radius:50%;
+	border-top-right-radius:50%;
+	border-top-left-radius:50%;
+	border-bottom-left-radius:50%;
+	height:200px;
+	width:200px;
+	border:2px solid #2c3e50;
+}
+.buttonc{
+	margin:0 auto;
+	padding-top:10px;
+	width:100px;
+}
+.contactbutton{
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bolder;
+	background-color:#ffaa00;
+	border:0;
+	border-bottom: 2px solid #e8930c;
+	padding:10px;
+	height:40px;
+	color:#2c3e50;
+}
+.contactbutton:active, .contactbutton:focus, .contactbutton:hover{
+	background-color:#ffbb00;
+	outline:none;
+}
+#contactpopup{
+	display:none;
+	width:100%;
+	background-color:#2c3e50;
+}
+#contactpopup *{
+	text-align:left;
+}
+#contactpopup a{
+	color:white;
+	transition:color .4s;
+}
+#contactpopup a:hover{
+	color:#ffaa00;
+}
+.contactmid{
+	width:24em;
+	margin:0 auto;
+	padding:10px 0;
+}
+.butbot{
+	display:block;
+	margin:10px auto;
+}
+.footer{
+	background-color:#2c3e50;
+	border-top:3px solid #ffaa00;
+	height:100px;
+}
+.legal{
+	margin-top:10px;
 }
 /*
 			Why Me*/
 
 .service{
 	background-color:white;
-	height:250px;
+	height:260px;
 }
 .svgicons{
 	height:150px;
@@ -167,20 +256,18 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 }
 .svg3 > img{
 	display:block;
-	margin-left:auto;
-	margin-right:auto;
+	margin:0 auto;
 }
 .tpad{
 	padding:5px;
 }
 .textspacing{
 	width:450px;
-	margin-left:auto;
-	margin-right:auto;
+	margin:0 auto;
 }
 
 .whatido{
-
+	height:400px;
 }
 .widleft{
 	width:50%;
@@ -203,13 +290,72 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 }
 .center{
 	width:144px;
-	margin-left:auto;
-	margin-right:auto;
+	margin:0 auto;
+}
+.widcontainer{
+	padding:15px;
+}
+.widcontainer a{
+	color:white;
+	transition:color .4s;
+}
+.widcontainer a:hover{
+	color:#ffaa00;
+}
+/*
+			About*/
+.about{
+	width:40%;
+	margin:0 auto;
 }
 
+/*
+			Resume*/
+.rcontent{
+	margin:0 auto;
+	width:890px;
+	height:100vh;
+	background-color:white;
+	background-color:rgba(255, 255,255, .8);
+}
+.rcontent p{
+	color:#2c3e50;
+}
+.rcontent a{
+	color:#2c5090;
+	transition:color .4s;
+}
+.rcontent a:hover{
+	color:white;
+}
+.split{
+	width:400px;
+	height:4px;
+	background-color:#2c3e50;
+	margin:0 auto;
+	margin-bottom:10px;
+	border-radius:50px;
+}
+.resume{
+	width:850px;
+	margin:0 auto;
+	font-family:Helvetica;
+}
+.resume p{
+	text-align:left;
+}
+.resume li{
+	color:#2c3e50;
+}
+.resleft{
+	width:35%;
+	float:left;
+}
 
-
-
+.resright{
+	width:65%;
+	float:right;
+}
 /*
 			General Rules*/
 
@@ -224,7 +370,10 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .down{
 	padding-top:100px;
 }
-
+.fright{
+	float:right;
+	margin-right:120px;
+}
 /*
 			Scrollbar*/
 
@@ -251,17 +400,20 @@ body::-webkit-scrollbar-button:increment:end {
 }
 input[type=submit]{
 	font-size:89%;
-	height:29px;
+	height:40px;
 	background-color:#ffaa00;
-	border:2px solid #eeaa00;
-	border-radius:3px;
+	border:0;
 	font-weight:bold;
 	color:#2c3e50;
-	margin-right:auto;
-	margin-left:auto;
+	margin:0 auto;
 	display:block;
+	padding:10px;
+	border-bottom: 2px solid #e8930c;
 }
-
+input[type=submit]:hover{
+	background-color:#ffbb00;
+	outline:0;
+}
 /*
 			Media Query*/
 
@@ -282,8 +434,38 @@ input[type=submit]{
 	}
 	.hireme{
 		width:80%;
-		margin-left:auto;
-		margin-right:auto;
+		margin:0 auto;
+	}
+	.meclass{
+		width:100%;
+	}
+	.me{
+		display:block;
+		margin:10px auto;
+	}
+	.rcontent{
+		width:100%;
+		height:auto;
+	}
+	.resume{
+		width:100%;
+	}
+	.resleft, .resright{
+		width:100%;
+		float:none;
+		margin:0 auto;
+		padding:10px 0px;
+	}
+	.resleft p, .resleft a, .resright p, .resright a{
+		padding:0px 20px;
+	}
+	.fright{
+		float:none;
+		margin:0 auto;
+		position:relative;
+	}
+	.down{
+		padding-top:50px;
 	}
 }
 @media print, screen and (max-width:500px) {
@@ -309,8 +491,15 @@ input[type=submit]{
 	.widright{
 		width:100%;
 	}
+	.widimage{
+		height:245px;
+	}
 }
 @media print, screen and (max-width:395px) {
 	.service{
 		height:580px;
 	}
+	.contactmid{
+		width:95%;
+	}
+}

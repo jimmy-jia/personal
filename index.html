@@ -7,13 +7,19 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="resources/fonts/style.css" rel='stylesheet' type='text/css'>
 		<link href="stylesheet.css" rel="stylesheet" type="text/css">
 		<link rel="icon" href="favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 		<script>
+			$(document).ready(function() {
+				var content=document.getElementById('content');
+    	    	$(content).css("display", "none");
+    		});
 			function pgload(){
+				var content=document.getElementById('content');
+				$(content).fadeIn(500);
 				var triangle=document.getElementById('fadein');
 				$(fadein).fadeIn(300);
 			}
@@ -24,8 +30,8 @@
 			<div class="top">
 				<div class="nav">
 					<a href="index.html" class="logo">
-						<img src="resources/logohover.png" id="imgsrchover" height="45px" style="margin-top:2px">
-						<img src="resources/logo.png" id="imgsrc" height="45px" style="margin-top:2px"></a>
+						<img src="resources/icon/logohover.png" id="imgsrchover" height="45px" style="margin-top:2px">
+						<img src="resources/icon/logo.png" id="imgsrc" height="45px" style="margin-top:2px"></a>
 					<ul class="linkbar" id="menu">
 						<li><div class="active" id="fadein"></div><a href="#"><span class="linkr"></span>HOME</a></li>
 						<li><a href="design.html"><span class="linkr"></span>DESIGN</a></li>
@@ -33,7 +39,7 @@
 						<li><a href="resume.html"><span class="linkr"></span>RESUME</a></li>
 					</ul>
 					<div class="dropdown">
-						<button class="dropbutton" id="dropbutton" onclick="displaynav()"><img src="resources/menu.png" class="svgw" height="40px"></button>
+						<button class="dropbutton" id="dropbutton" onclick="displaynav()"><img src="resources/icon/menu.png" class="svgw" height="40px"></button>
 						<ul class="dropmenu" id="drop-menu">
 							<li><a href="#"><span class="linkr"></span>HOME</a></li>
 							<li><a href="design.html"><span class="linkr"></span>DESIGN</a></li>
@@ -43,28 +49,44 @@
 					</div>
 				</div>
 			</div>
-			<div class="content">
-				<div class="header widb">
-					<p class="title down">Hi, I'm Jimmy Jia</p>
-					<p>an independent web developer</p>
+			<div class="content" id="content">
+				<div class="header widb down">
+					<div class="meclass">
+						<p class="title down fright" style="font-family:'Myriad Pro Semibold';">Hi, I'm Jimmy Jia</p>
+						<p class ="fright">a front-end web developer</p>
+						<img src="resources/pics/bcme.png" class="me"></img>
+					</div>
+					
 					<p class="hireme">If you're looking for someone to create your new website, you've come to the right place</p>
+					<div class="buttonc"><button class="contactbutton" onclick="displaycontact()">Contact Me</button></div>
+
+				</div>
+				<div id="contactpopup">
+					<div class="contactmid">
+						<p class="vlarge">Contact</p>
+						<p>Feel free to contact me if you have any questions. I'll be glad to answer them for you!</p>
+						<br>
+						<p><img src="resources/icon/mail.svg" height="24px"></img>   <a href="mailto:jimmy.j.jia@gmail.com">jimmy.j.jia@gmail.com</a></p>
+						<p><img src="resources/icon/wphone.svg" height="36px"></img> 503-475-9621</p>
+						<button class="contactbutton butbot" onclick="hidecontact()">Close</button>
+					</div>
 				</div>
 				<div class="service widw">
 					<p class="btext vlarge">Why Me?</p>
 					<div class="svgicons">
 						<div class="svg3">
 							<p class="btext large">Responsive Design</p>
-							<div class="center"><img src="resources/test.svg"><img src="resources/plus.svg" height="64px"><img src="resources/computer.svg"></div>
+							<div class="center"><img src="resources/icon/test.svg"><img src="resources/icon/plus.svg" height="64px"><img src="resources/icon/computer.svg"></div>
 							<div class="textspacing"><p class="btext tpad">With responsive design, your site will look perfect no matter what device your site is viewed on.</p></div>
 						</div>
 						<div class="svg3">
 							<p class="btext large">Cheap Pricing</p>
-							<img src="resources/money.svg" height="68px">
+							<img src="resources/icon/money.svg" height="68px">
 							<div class="textspacing"><p class="btext tpad">I charge affordable prices for my services. You won't have to break the bank to have a stunning website.</p></div>
 						</div>
 						<div class="svg3">
 							<p class="btext large">Superior Service</p>
-							<img src="resources/awyea.svg" height="68px">
+							<img src="resources/icon/awyea.svg" height="68px">
 							<div class="textspacing"><p class="btext tpad">Fast response times, great communication, guarenteed. You'll love your entire experience! </p></div>
 						</div>
 					</div>
@@ -72,32 +94,43 @@
 				</div>
 				<div class="whatido">
 					<div class="widleft widb">
+						<p class="large widcontainer"><a href="http://foodseeker.net">foodseeker.net</a></p>
+						<p class="widcontainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo nunc, ullamcorper et risus et, tincidunt pellentesque augue. In dignissim lectus viverra ex cursus tempus. Donec elit mauris, tempor in ipsum ut, bibendum eleifend felis. In blandit metus non arcu accumsan convallis. Integer et elit ut nulla vestibulum congue sed eget arcu. Suspendisse potenti. Sed tempus, quam non congue facilisis, ligula sapien dignissim ex, in auctor libero ipsum consequat nisl. Maecenas velit ex, finibus ut nunc maximus, sodales ullamcorper tellus. Sed cursus justo eros, non congue tellus scelerisque vestibulum. In hac habitasse platea dictumst. Maecenas tincidunt, eros consequat pretium suscipit, sem mauris cursus tortor, vitae ultricies mi nibh sit amet libero.</p>
 					</div>
-					<div class="widright widw">
+					<div class="widright widw widimage" style="background-color:silver">
+						<img src="resources/pics/foodseeker.png" width="100%"></img>
 					</div>
 				</div>
 				<div class="whatido">
-					<div class="widleft widw">
-					</div>
 					<div class="widright widb">
+						<p class="large widcontainer"><a href="http://jimmy-jia.github.io/EOH">EOH Concept</a></p>
+						<p class="widcontainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo nunc, ullamcorper et risus et, tincidunt pellentesque augue. In dignissim lectus viverra ex cursus tempus. Donec elit mauris, tempor in ipsum ut, bibendum eleifend felis. In blandit metus non arcu accumsan convallis. Integer et elit ut nulla vestibulum congue sed eget arcu. Suspendisse potenti. Sed tempus, quam non congue facilisis, ligula sapien dignissim ex, in auctor libero ipsum consequat nisl. Maecenas velit ex, finibus ut nunc maximus, sodales ullamcorper tellus.</p>
+					</div>
+					<div class="widleft widw widimage" style="background-color:silver;">
+						<video width="100%" height="100%" controls>
+							<source src="resources/pics/eoh.mp4" type="video/mp4">
+						Your browser does not support HTML5 Video.
+						</video>
 					</div>
 				</div>
-
-
+				<div class="footer">
+					<ul class="footnav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="design.html">Design</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="resume.html">Resume</a></li>
+					<div class="legal">
+						<p>Jimmy Jia - 2014</p>
+					</div>
+				</div>
 			</div>
-
-
-
-
-
-
-
 		</div>
 		<script>
 			window.onload=pgload;
 		</script>
 		<script>
 			var count=0;
+			var contact=0
 			function displaynav(){
 				var dropper=document.getElementById("drop-menu");
 				if (count==0){
@@ -109,9 +142,22 @@
 					count=0;
 				}
 			}
-			if (count==1){
-				document.onclick=displaynav;
-				alert(test)
+			function displaycontact(){
+				if (contact==1){
+					hidecontact();
+				}
+				else {
+					var showcontact = document.getElementById("contactpopup");
+					$(showcontact).slideDown(400);
+					contact=1;
+				}
+			}
+			function hidecontact(){
+				if (contact==1){
+					var showcontact = document.getElementById("contactpopup");
+					$(showcontact).slideUp(400);
+					contact=0;
+				}
 			}
 		</script>
 	</body>
