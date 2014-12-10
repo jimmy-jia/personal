@@ -76,11 +76,11 @@
 			function displaynav(){
 				var dropper=document.getElementById("drop-menu");
 				if (count==0){
-					$(dropper).fadeIn(400);
+					$(dropper).slideDown(400);
 					count=1;
 				}
 				else{
-					$(dropper).fadeOut(400);
+					$(dropper).slideUp(400);
 					count=0;
 				}
 			}

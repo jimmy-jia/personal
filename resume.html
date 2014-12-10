@@ -74,7 +74,7 @@
 					</div>
 					<div class="resright">
 						<p class="vlarge">Experience</p>
-						<p class="large"><a href="http://tjacupuncture.com" target="_blank">TJ Acupuncture</a></p>
+						<a href="http://tjacupuncture.com" target="_blank" class="large rlink">TJ Acupuncture</a>
 						<p>Technical Specialist | June 2014 - Now</p>
 						<ul>
 							<li>At TJ Acupuncture, I provide technical support for all the clinic's needs (website, computers, files, etc).</li>
@@ -82,7 +82,7 @@
 							<li>Recently added responsive design to accomodate for all screen sizes, planning a redesign to improve overall usability and user experience.</li>
 							<li>While at school, I continue to give technical support remotely</li>
 						</ul>
-						<p class="large"><a href="http://www.acementor.org/affiliates/oregon/portland/about-us/" target="_blank">Ace Mentorship</a></p>
+						<a href="http://www.acementor.org/affiliates/oregon/portland/about-us/" target="_blank" class="large rlink">Ace Mentorship</a>
 						<p>Engineering Mentee | Winter 2013 - Spring 2013</p>
 						<ul>
 							<li>I worked with a small team of student peers and professional mentors to design an addition to Washington High School.</li>
@@ -124,11 +124,11 @@
 			function displaynav(){
 				var dropper=document.getElementById("drop-menu");
 				if (count==0){
-					$(dropper).fadeIn(400);
+					$(dropper).slideDown(400);
 					count=1;
 				}
 				else{
-					$(dropper).fadeOut(400);
+					$(dropper).slideUp(400);
 					count=0;
 				}
 			}

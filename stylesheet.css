@@ -108,8 +108,8 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	position:absolute;
 	right:0;
 	list-style:none;
-	background-color:white;
-	background-color:rgba(255, 170, 0, .9);
+	background-color:#ffaa00;
+	background-color:rgba(255, 170, 0, 1);
 	margin:0;
 	margin-top:3px;
 	padding:0;
@@ -124,12 +124,15 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	text-align:center;
 }
 .dropmenu li:hover{
-	background-color:#ffaa00;
+	background-color:white;
 }
 .dropmenu li a{
 	color:white;
 	font-family:'Lato', Sans-serif;
 	font-size:25px;
+}
+.dropmenu li a:hover{
+	color:#fa0;
 }
 .svgw:hover{
 	cursor:pointer;
@@ -333,7 +336,8 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	position: relative;
 	top: 50%;
 	left:50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	box-sizing: border-box;
 	box-shadow:0 1px 10px #333;
 }
@@ -344,7 +348,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 /*
 			About*/
 .about{
-	width:35%;
+	width:700px;
 	margin:0 auto;
 	padding:30px 40px;
 	padding-top:0;
@@ -406,6 +410,9 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 }
 .dllink{
 	margin-top:20px;
+}
+.rlink{
+	font-family:'Lato', Sans-serif;
 }
 /*
 			General Rules*/
@@ -523,8 +530,16 @@ input[type=submit]:hover{
 	.down{
 		padding-top:50px;
 	}
+	.adown{
+		padding-top:70px;
+	}
 	.padder{
 		width:80%;
+	}
+	.about{
+		width:100%;
+		margin:0;
+		box-sizing: border-box;
 	}
 }
 @media print, screen and (max-width:700px) {
@@ -576,11 +591,16 @@ input[type=submit]:hover{
 	.foodimg{
 		width:90%;
 		top: 0;
-		transform: translate(-50%, 0%);
+		-webkit-transform: translate(-50%, 0%);
+		        transform: translate(-50%, 0%);
 	}
 }
 @media print, screen and (max-width:395px) {
 	.contactmid{
 		width:95%;
+	}
+	.about{
+		padding:0 10px;
+		padding-bottom:20px;
 	}
 }
