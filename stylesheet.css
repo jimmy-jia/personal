@@ -101,6 +101,8 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	margin:0;
 	padding:0;
 	outline:0;
+	margin-right:5px;
+	margin-top:2px;
 }
 
 .dropmenu{
@@ -135,7 +137,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	margin:0;
 	padding:0;
 	text-align:center;
-	padding-top:40px;
+	padding-top:30px;
 }
 .footnav li{
 	display:inline-block;
@@ -236,7 +238,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .footer{
 	background-color:#2c3e50;
 	border-top:3px solid #ffaa00;
-	height:100px;
+	height:90px;
 }
 .legal{
 	margin-top:10px;
@@ -296,7 +298,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	width:144px;
 	margin:0 auto;
 }
-.widcontainer{
+.widcontainer, .widcontainerb{
 	padding:0 20px;
 	padding-top:50px;
 }
@@ -304,8 +306,36 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	color:white;
 	transition:color .4s;
 }
-.widcontainer a:hover{
+.widcontainerb a{
+	color:#2c3e50;
+	transition:color .4s;
+}
+.widcontainer a:hover, .widcontainerb a:hover{
 	color:#ffaa00;
+}
+.ulcontainer{
+	padding-top:20px;
+	width:80%;
+	margin:0 auto;
+	color:white;
+	
+}
+.ulcontainer li{
+	list-style-type:circle;
+	margin-top:3px;
+}
+.foodimg{
+	width:75%;
+	position: relative;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	box-shadow:0 1px 10px #333;
+}
+.padder{
+	box-sizing: border-box;
+	width:60%;
 }
 /*
 			About*/
@@ -322,6 +352,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	height:100vh;
 	background-color:white;
 	background-color:rgba(255, 255,255, .8);
+	box-shadow:0 2px 10px #333;
 }
 .rcontent p{
 	color:#2c3e50;
@@ -450,6 +481,9 @@ input[type=submit]:hover{
 		display:block;
 		margin:10px auto;
 	}
+	.widcontainer, .widcontainerb{
+		padding-top:30px;
+	}
 	.rcontent{
 		width:100%;
 		height:auto;
@@ -474,11 +508,17 @@ input[type=submit]:hover{
 	.down{
 		padding-top:50px;
 	}
+	.padder{
+		width:80%;
+	}
 }
-@media print, screen and (max-width:500px) {
-
+@media print, screen and (max-width:700px) {
+	.hireme{
+		line-height:150%;
+	}
 	.textspacing{
-		width:95%;
+		width:90%;
+		line-height:150%;
 	}
 	.dropdown{
 		display:block;
@@ -487,19 +527,41 @@ input[type=submit]:hover{
 		display:none;
 	}
 	.service{
-		height:520px
+		height:auto;
+	}
+	.center{
+		margin-top:10px;
 	}
 	.svg3{
 		width:100%;
+		margin:10px 0;
+	}
+	.svg3 > img{
+		margin-top:10px;
 	}
 	.widleft{
 		width:100%;
 	}
 	.widright{
 		width:100%;
+		height:auto;
+		padding-bottom:30px;
 	}
 	.widimage{
-		height:245px;
+		height:auto;
+		padding:0;
+	}
+	.widb{
+		height:auto;
+		padding-bottom:30px;
+	}
+	.footer{
+		height:auto;
+	}
+	.foodimg{
+		width:90%;
+		top: 0;
+		transform: translate(-50%, 0%);
 	}
 }
 @media print, screen and (max-width:395px) {
