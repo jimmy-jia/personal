@@ -102,7 +102,6 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	padding:0;
 	outline:0;
 	margin-right:5px;
-	margin-top:2px;
 }
 
 .dropmenu{
@@ -110,10 +109,11 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	right:0;
 	list-style:none;
 	background-color:white;
-	background-color:rgba(255, 170, 0, .8);
+	background-color:rgba(255, 170, 0, .9);
 	margin:0;
 	margin-top:3px;
 	padding:0;
+	width:100%;
 }
 #drop-menu{
 	display:none;
@@ -121,6 +121,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .dropmenu li{
 	padding:10px;
 	position:relative;
+	text-align:center;
 }
 .dropmenu li:hover{
 	background-color:#ffaa00;
@@ -128,6 +129,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .dropmenu li a{
 	color:white;
 	font-family:'Lato', Sans-serif;
+	font-size:25px;
 }
 .svgw:hover{
 	cursor:pointer;
@@ -386,11 +388,15 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .resleft{
 	width:35%;
 	float:left;
+	line-height:130%;
 }
 
 .resright{
 	width:65%;
 	float:right;
+}
+.dllink{
+	margin-top:20px;
 }
 /*
 			General Rules*/
@@ -565,9 +571,6 @@ input[type=submit]:hover{
 	}
 }
 @media print, screen and (max-width:395px) {
-	.service{
-		height:580px;
-	}
 	.contactmid{
 		width:95%;
 	}
