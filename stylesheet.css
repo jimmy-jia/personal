@@ -303,6 +303,8 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .widcontainer, .widcontainerb{
 	padding:0 20px;
 	padding-top:50px;
+	width:80%;
+	margin:0 auto;
 }
 .widcontainer a{
 	color:white;
@@ -342,8 +344,15 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 /*
 			About*/
 .about{
-	width:40%;
+	width:35%;
 	margin:0 auto;
+	padding:30px 40px;
+	padding-top:0;
+
+}
+.about *{
+	line-height:160%;
+	text-align:left;
 }
 
 /*
