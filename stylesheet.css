@@ -308,6 +308,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	padding-top:50px;
 	width:80%;
 	margin:0 auto;
+	text-align:justify;
 }
 .widcontainer a{
 	color:white;
@@ -356,7 +357,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 }
 .about *{
 	line-height:160%;
-	text-align:left;
+	text-align:justify;
 }
 
 /*
