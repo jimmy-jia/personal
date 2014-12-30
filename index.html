@@ -15,6 +15,12 @@
 			$(document).ready(function() {
 				var content=document.getElementById('content');
     	    	$(content).css("display", "none");
+    	    	$('.scrollup').click(function () {
+			        $("html, body").animate({
+			            scrollTop: 0
+			        }, 600);
+			        return false;
+	    		});
     		});
 			function pgload(){
 				var content=document.getElementById('content');
@@ -25,6 +31,8 @@
 		</script>
 	</head>
 	<body>
+		<div class="bg"></div>
+		<div class="bgb"></div>
 		<div class="wrapper">
 			<div class="top">
 				<div class="nav">
@@ -49,7 +57,7 @@
 				</div>
 			</div>
 			<div class="content" id="content">
-				<div class="header widb down">
+				<div class="header down">
 					<div class="meclass">
 						<p class="title down fright" style="font-family:'Myriad Pro Semibold';">Hi, I'm Jimmy Jia</p>
 						<p class ="fright">a front-end web developer</p>
@@ -58,16 +66,15 @@
 					
 					<p class="hireme">If you're looking for someone to create your new website, you've come to the right place</p>
 					<div class="buttonc"><button class="contactbutton" onclick="displaycontact()">Contact Me</button></div>
-
-				</div>
-				<div id="contactpopup">
-					<div class="contactmid">
-						<p class="vlarge">Contact</p>
-						<p>Feel free to contact me if you have any questions. I'll be glad to answer them for you!</p>
-						<br>
-						<p><img src="resources/icons/mail.svg" height="24px"></img>   <a href="mailto:jimmy.j.jia@gmail.com">jimmy.j.jia@gmail.com</a></p>
-						<p><img src="resources/icons/wphone.svg" height="36px"></img> 503-475-9621</p>
-						<button class="contactbutton butbot" onclick="hidecontact()">Close</button>
+					<div id="contactpopup">
+						<div class="contactmid">
+							<p class="vlarge">Contact</p>
+							<p>Feel free to contact me if you have any questions. I'll be glad to answer them for you!</p>
+							<br>
+							<p><img src="resources/icons/mail.svg" height="24px"></img>   <a href="mailto:jimmy.j.jia@gmail.com">jimmy.j.jia@gmail.com</a></p>
+							<p><img src="resources/icons/wphone.svg" height="36px"></img> 503-475-9621</p>
+							<button class="butbot contact2" onclick="hidecontact()">Close</button>
+						</div>
 					</div>
 				</div>
 				<div class="service widw">
@@ -117,13 +124,9 @@
 					</div>
 				</div>
 				<div class="footer">
-					<ul class="footnav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="design.html">Design</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="resume.html">Resume</a></li>
 					<div class="legal">
-						<p>Jimmy Jia - 2014</p>
+						<a href="#" class="scrollup"><img src="resources/icons/up.svg" class="svgw" height="40px"></a>
+						<p>Jimmy Jia - 2014-2015</p>
 					</div>
 				</div>
 			</div>
@@ -164,4 +167,4 @@
 			}
 		</script>
 	</body>
-</html>
+</head>

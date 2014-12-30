@@ -15,6 +15,12 @@
 			$(document).ready(function() {
 				var content=document.getElementById('content');
 	        	$(content).css("display", "none");
+    	    	$('.scrollup').click(function () {
+			        $("html, body").animate({
+			            scrollTop: 0
+			        }, 600);
+			        return false;
+	    		});
 	    	});
 			function pgload(){
 				var content=document.getElementById('content');
@@ -57,9 +63,7 @@
 						<br>
 						<p class="">I'm Jimmy Jia, a sophomore student at the University of Illinois at Urbana Champaign.</p>
 						<p>I'm currently studying Electrical Engineering with a focus on Computer Engineering/Science.</p>
-					
 					<br>
-					
 						<p class="large">Who I Am</p>
 						<br>
 						<p>I'm a sophomore in electrical engineering who discovered a passion for technology at a young age. While the last generation grew up with the television, I, like many of my classmates, grew up with video games and computers. I got my first computer, a Windows 95 machine that we picked off a curb when I was in elementary school. I had no idea how to use it, besides playing one preinstalled game. Soon, my parents bought a Windows 98 machine, and at a friend's house I discovered the internet, and what I saw amazed me. I begged my parents to sign up for the internet, and soon we had NetZero (is that even around still?), which I used to play NeoPets every day after school. At around this age I started wondering how these marvelous machines actually worked. Were they magic? Were they some alien technology so advanced it takes Bill Gates to understand? I didn't know, and to be honest, I still don't know for a fact. As the years progressed, I went through more computers, to XP, Vista, and 7. By this time I was a fully fledged gamer, Diablo and League of Legends being my staples. I went through high school without learning how to code. Sure I went on Codecademny and checked out the Python and HTML/CSS course for a little bit, but never long enough to remember anything. It wasn't until coming to the University of Illinois that I discovered my love of programming and web design. Through my courses and own time, I started to learn more and more about programming, leaning towards web design because I love to see what I make come to life in front of me. I strike to one day be one of the best, and if I can keep up my pace of learning, my goal will be in sight.
@@ -72,25 +76,13 @@
 				</div>
 				
 				<div class="footer">
-					<ul class="footnav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="design.html">Design</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="resume.html">Resume</a></li>
 					<div class="legal">
+						<a href="#" class="scrollup"><img src="resources/icons/up.svg" class="svgw" height="40px"></a>
 						<p>Jimmy Jia - 2014</p>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
-
-
 		<script>
 			window.onload=pgload;
 		</script>

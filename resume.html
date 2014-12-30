@@ -15,6 +15,12 @@
 			$(document).ready(function() {
 				var content=document.getElementById('content');
 	        	$(content).css("display", "none");
+    	    	$('.scrollup').click(function () {
+			        $("html, body").animate({
+			            scrollTop: 0
+			        }, 600);
+			        return false;
+	    		});
 	    	});
 			function pgload(){
 				var content=document.getElementById('content');
@@ -65,6 +71,7 @@
 						<p>Fall 2013- Spring 2017</p>
 						<p>Electrical Engineering</p>
 						<p>College of Engineering</p>
+						<p>GPA: 3.01/4.00</p>
 						<br>
 						<p class="large">Programming</p>
 						<p>HTML, CSS3, C, Python</p>
@@ -97,24 +104,12 @@
 				</div>
 			</div>
 			<div class="footer">
-					<ul class="footnav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="design.html">Design</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="resume.html">Resume</a></li>
 					<div class="legal">
+						<a href="#" class="scrollup"><img src="resources/icons/up.svg" class="svgw" height="40px"></a>
 						<p>Jimmy Jia - 2014</p>
 					</div>
 				</div>
 		</div>
-
-
-
-
-
-
-
-
 		<script>
 			window.onload=pgload;
 		</script>
