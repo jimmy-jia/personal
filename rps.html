@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RPS!</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<style>
+			body{background-color:#9999aa; font-family:Verdana;}
+			p:first-child{font-size:200%;}
+			p{text-align:center;}
+			#displaygame{
+				width: 250px;
+				margin:0 auto;
+			}
+			.rpsbutton{
+				text-align:center;
+				margin:0;
+				padding:10px;
+				height:auto;
+				background-color:#cd4444;
+				border:0;
+				border-radius:3px;
+				font-weight:120%;
+				font-size:120%;
+				transition:background-color .4s;
+			}
+			.rpsbutton:hover{background-color:#cd2222;}
+			.rpsbutton:focus{
+				outline:0;
+				box-shadow:0 1px 5px #333;
+			}
+			#result{display:none;}
+		</style>
+	</head>
+	<body>
+		<p class="title">Rock Paper Scissors Simulator!</p>
+		<p class="instruct">Select your choice, and see if you win!</p>
+
+		<div id="displaygame">
+			<button class="rpsbutton" onclick="rps(1)">Rock</button>
+			<button class="rpsbutton" onclick="rps(2)">Paper</button>
+			<button class="rpsbutton" onclick="rps(3)">Scissors</button>
+			<p id="result"></p>
+			<p id="winloss"></p>
+		</div>
+		<script>
+			var tie=0, win=0, loss=0;
+			function rps(value){
+				var resultspace=document.getElementById('result');
+				var winloss=document.getElementById('winloss');
+				$(resultspace).fadeOut(500);
+				var result=0;
+				var computer=Math.floor(Math.random()*3+1);
+				if (value==computer){
+					result=-1;
+				}
+				else if (value==1){
+					if (computer==2){result=0;}
+					if (computer==3){result=1;}
+				}
+				else if (value==2){
+					if (computer==1){result=1;}
+					if (computer==3){result=0;}
+				}
+				else if (value==3){
+					if (computer==1){result=0;}
+					if (computer==2){result=1;}
+				}
+				switch(result){
+					case -1:
+						resultspace.innerHTML="Tie!";
+						tie+=1;
+						break;
+					case 1:
+						resultspace.innerHTML="Win!";
+						win+=1;
+						break;
+					default:
+						resultspace.innerHTML="Loss";
+						loss+=1;
+						break;	
+				}
+				winloss.innerHTML="Wins: "+win+", Ties: "+tie+", Losses: "+loss;
+				$(resultspace).fadeIn(500);
+			}
+		</script>
+	</body>
+</html>
