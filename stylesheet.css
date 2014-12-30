@@ -575,6 +575,9 @@ input[type=submit]:hover{
 	}
 }
 @media print, screen and (max-width:700px) {
+	.meclass{
+		margin-top:70px;
+	}
 	.hireme{
 		line-height:120%;
 		width:60%;
