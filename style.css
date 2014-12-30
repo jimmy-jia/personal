@@ -14,7 +14,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	z-index:-10;
 	height:100%;
 	width:100%;}
-.bgb{background-color:rgba(0, 0, 0, .4);
+.bgb{background-color:rgba(0, 0, 0, .25);
 	position:fixed;
 	z-index:-9;
 	height:100%;
@@ -162,7 +162,7 @@ p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 	padding-bottom:20px;
 	height:90vh;
 }
-.header p{color:#eee; 	text-shadow:1px 1px black;}
+.header p{color:white; text-shadow:1px 1px black;}
 .hireme{
 	margin-top:50px;
 	margin-bottom:20px;
