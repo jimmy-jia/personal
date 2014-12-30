@@ -9,7 +9,6 @@ body{margin:0;padding:0;background-color:#2c3e50;background-color:rgba(44, 62, 8
 a{text-decoration:none;}
 p{color:white; text-align:center;margin:0;font-family:'Lato', Sans-serif;}
 .bg{background-image:url('resources/pics/background2.jpe');
-	background-size:cover;
 	position:fixed;
 	z-index:-10;
 	height:100%;
@@ -637,7 +636,7 @@ input[type=submit]:hover{
 		-webkit-transform: translate(-50%, 0%);
 		        transform: translate(-50%, 0%);
 	}
-	#contactpopup{margin-top:-20px;}
+	#contactpopup{margin-top:-10px;background-color:#2c3e50;}
 	.about{padding-top:20px;}
 }
 @media print, screen and (max-width:395px) {
